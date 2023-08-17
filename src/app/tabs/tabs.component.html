@@ -1,0 +1,8 @@
+<mat-tab-group [class.small-screen]="isSmallScreen" class="tabs-container">
+  <mat-tab *ngFor="let label of tabLabels; let i = index" [label]="label">
+    <app-sections [sections]="tabSections[i]"></app-sections>
+    <div class="button-container">
+      <button class="submit-button" (click)="sendDataToApi(tabSections, i)">Submit</button>
+    </div>
+  </mat-tab>
+</mat-tab-group>
