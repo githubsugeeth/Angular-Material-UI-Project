@@ -5,7 +5,7 @@
     </div>
     <div class="questions" *ngIf="expandedSectionIndex === i">
       <div *ngFor="let question of section.questions" class="question-container">
-        {{ question.text }}
+        <span class="question-text">{{ question.text }}</span>
         <ng-container *ngIf="question.type === 'dropdown'">
           <mat-form-field>
             <mat-label>{{ question.label }}</mat-label>
